@@ -251,25 +251,25 @@ window.onload = function() {
         counterGreen += 1
       } }
 
-      // if(counterRed === 0) {
-      //   alert("YOU ARE AN ENGAGEMENT EXPERT! ALL ANSWERS CORRECT!")
-      // } else if (counterRed === 1) {
-      //   alert("GOOD JOB. ONLY 1 FALSE");
-      //   scoreStorage += 4;
-      // } else if (counterRed === 2) {
-      //   alert("YOU CAN DO BETTER!");
-      //   scoreStorage += 3;
-      // } else if (counterRed === 3) {
-      //   alert("OH NO, ALL WRONG!");
-      //   scoreStorage += 2;
-      // };
+      if(counterRed === 0) {
+        alert("YOU ARE AN ENGAGEMENT EXPERT! ALL ANSWERS CORRECT!")
+      } else if (counterRed === 1) {
+        alert("GOOD JOB. ONLY 1 FALSE");
+        scoreStorage += 4;
+      } else if (counterRed === 2) {
+        alert("YOU CAN DO BETTER!");
+        scoreStorage += 3;
+      } else if (counterRed === 3) {
+        alert("OH NO, ALL WRONG!");
+        scoreStorage += 2;
+      };
 
-      if (nbOfRounds === 3) {
-        alert("DONE! You scored " + scoreStorage + " points");
-        setTimeout(function() {
-          location.reload()
-        },1500)
-      }
+      // if (nbOfRounds === 3) {
+      //   alert("DONE! You scored " + scoreStorage + " points");
+      //   setTimeout(function() {
+      //     location.reload()
+      //   },1500)
+      // }
 
 
     $("#spin").prop('disabled', false);
