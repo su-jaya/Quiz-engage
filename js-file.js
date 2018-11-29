@@ -265,7 +265,10 @@ window.onload = function() {
       // };
 
       if (nbOfRounds === 3) {
-        alert("DONE! You scored " + scoreStorage + " points")
+        alert("DONE! You scored " + scoreStorage + " points");
+        setTimeout(function() {
+          location.reload()
+        },1500)
       }
 
 
