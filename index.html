@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <title>Berlin Quiz</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js-file.js"></script>
+  <link rel="stylesheet" href="css-file.css" />
+  <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header id="headline">
+
+    <h1>The ultimative Engagement Quiz!</h1>
+  </header>
+
+  <!-- WHEEL -->
+  <div id="outerContainer">
+    <section id="wheel">
+      <img src="pointer.png" width="40px" height="5%">
+      <canvas id="canvas" width="500" height="500"></canvas>
+      <button type="button" id="spin">Spin!</button>
+    </section>
+
+    <!-- THE QUIZ -->
+
+    <section id="quiz">
+      <div id="counter"></div>
+
+      <!-- QUIZ CONTAINER -->
+
+      <div id="questionContainer">
+        <h1 id="default-text">SPIN THE WHEEL!</h1>
+
+        <!-- Stats -->
+        <div id="stats">
+
+          <!-- STATS SET 1-->
+          <div id="stats1">
+
+          <!-- Question 1 -->
+          <div class="question">
+            <h2>Worldwide only ___% of all employees are engaged</h2>
+
+            <form class="answers">
+              <div class="answerSet">
+                <input type="radio" id="20" name="question" />
+                <label for="20">20%</label>
+              </div>
+
+              <div class="answerSet">
+                <input type="radio" id="35" name="question" />
+                <label for="35">35%</label>
+              </div>
+
+              <div class="answerSet correct">
+                <input type="radio" id="15" name="question" />
+                <label for="15">15%</label>
+              </div>
+            </form>
+          </div>
+
+          <!-- Question 2 -->
+          <div class="question">
+            <h2>Engaged employees increase a company’s productivity by
+            </h2>
+
+            <form class="answers">
+              <div class="answerSet correct">
+                <input type="radio" id="20-1" name="question" />
+                <label for="20-1">20%</label>
+              </div>
+
+              <div class="answerSet">
+                <input type="radio" id="40" name="question" />
+                <label for="40">40%</label>
+              </div>
+
+              <div class="answerSet">
+                <input type="radio" id="10" name="question" />
+                <label for="10">10%</label>
+              </div>
+            </form>
+          </div>
+
+          <!-- Question 3 -->
+          <div class="question">
+            <h2>Engagement decreases the rate of absenteeism by</h2>
+
+            <form class="answers">
+              <div class="answerSet">
+                <input type="radio" id="44" name="question" />
+                <label for="44">44%</label>
+              </div>
+
+              <div class="answerSet correct">
+                <input type="radio" id="37" name="question" />
+                <label for="37">37%</label>
+              </div>
+
+              <div class="answerSet">
+                <input type="radio" id="12" name="question" />
+                <label for="12">12%</label>
+              </div>
+            </form>
+          </div>
+        </div>
+
+          <!-- STATS SET 2-->
+        <div id="stats2">
+
+          <!-- Question 1 -->
+          <div class="question">
+            <h2>Organizations report up to ___% fewer lost employees</h2>
+
+            <form class="answers">
+              <div class="answerSet correct">
+                <input type="radio" id="65" name="question" />
+                <label for="65">65%</label>
+              </div>
+
+              <div class="answerSet">
+                <input type="radio" id="33" name="question" />
+                <label for="33">33%</label>
+              </div>
+
+              <div class="answerSet">
+                <input type="radio" id="53" name="question" />
+                <label for="53">53%</label>
+              </div>
+            </form>
+          </div>
+
+          <!-- Question 2 -->
+          <div class="question">
+            <h2>__% of millennial expect engagement in their job</h2>
+
+            <form class="answers">
+              <div class="answerSet">
+                <input type="radio" id="55" name="question" />
+                <label for="55">55%</label>
+              </div>
+
+              <div class="answerSet">
+                <input type="radio" id="38" name="question" />
+                <label for="38">38%</label>
+              </div>
+
+              <div class="answerSet correct">
+                <input type="radio" id="87" name="question" />
+                <label for="87">87%</label>
+              </div>
+            </form>
+          </div>
+
+          <!-- Question 3 -->
+          <div class="question">
+            <h2>___% of engaged employees show no desire to leave their company</h2>
+
+            <form class="answers">
+              <div class="answerSet correct">
+                <input type="radio" id="87-1" name="question" />
+                <label for="87-1">87%</label>
+              </div>
+
+              <div class="answerSet correct">
+                <input type="radio" id="33-1" name="question" />
+                <label for="33-1">33%</label>
+              </div>
+
+              <div class="answerSet">
+                <input type="radio" id="15-1" name="question" />
+                <label for="15-1">15%</label>
+              </div>
+            </form>
+          </div>
+          
+        </div>
+        </div>
+
+        <!--Theory-->
+        <div id="theory">
+
+          <!-- THEORY SET 1-->
+          <div id="theory1">
+
+          <!-- Question 1 -->
+          <div class="question">
+            <h2>being stimulated to accomplish certain goals in order to reach desired outcome, is …</h2>
+
+            <form class="answers">
+              <div class="answerSet">
+                <input type="radio" id="happiness" name="question" />
+                <label for="happiness">Happiness</label>
+              </div>
+
+              <div class="answerSet correct">
+                <input type="radio" id="motivation" name="question" />
+                <label for="motivation">Motivation</label>
+              </div>
+
+              <div class="answerSet">
+                <input type="radio" id="engagement" name="question" />
+                <label for="engagement">Engagement</label>
+              </div>
+            </form>
+          </div>
+
+          <!--Question 2-->
+          <div class="question">
+            <h2>Satisfaction ___ ensure high level of productivity</h2>
+
+            <form class="answers">
+              <div class="answerSet">
+                <input type="radio" id="does" name="question" />
+                <label for="does">does</label>
+              </div>
+
+              <div class="answerSet correct">
+                <input type="radio" id="doesnot" name="question" />
+                <label for="doesnot">does not</label>
+              </div>
+
+            </form>
+          </div>
+
+          <!--Question 3-->
+          <div class="question">
+            <h2>Happy employees</h2>
+
+            <form class="answers">
+              <div class="answerSet">
+                <input type="radio" id="are" name="question" />
+                <label for="are">are engaged</label>
+              </div>
+
+              <div class="answerSet correct">
+                <input type="radio" id="not" name="question" />
+                <label for="not">are not automatically engaged</label>
+              </div>
+
+    
+            </form>
+          </div>
+          </div>
+
+          <!-- THEORY SET 2-->
+          <div id="theory2">
+
+              <!-- Question 1 -->
+              <div class="question">
+                <h2>Internal Motivation occurs when we act without any obvious ___ rewards</h2>
+
+                <form class="answers">
+                  <div class="answerSet correct">
+                    <input type="radio" id="external" name="question" />
+                    <label for="external">external</label>
+                  </div>
+
+                  <div class="answerSet">
+                    <input type="radio" id="internal" name="question" />
+                    <label for="internal">internal</label>
+                  </div>
+
+                  <div class="answerSet">
+                    <input type="radio" id="monetary" name="question" />
+                    <label for="monetary">monetary</label>
+                  </div>
+                </form>
+              </div>
+
+              <!--Question 2-->
+              <div class="question">
+                <h2>external motivation can make your employees happy and satisfied </h2>
+
+                <form class="answers">
+                  <div class="answerSet correct">
+                    <input type="radio" id="notprod" name="question" />
+                    <label for="notprod"> but it doesn’t mean they are productive</label>
+                  </div>
+
+                  <div class="answerSet">
+                    <input type="radio" id="moreprod" name="question" />
+                    <label for="moreprod">and in turn lead to more productive employees</label>
+                  </div>
+
+                </form>
+              </div>
+
+              <!--Question 3-->
+              <div class="question">
+                <h2>Only____ can lead to engagement</h2>
+
+                <form class="answers">
+                  <div class="answerSet correct">
+                    <input type="radio" id="internal-m" name="question" />
+                    <label for="internal-m">internal motivators</label>
+                  </div>
+
+                  <div class="answerSet">
+                    <input type="radio" id="external-m" name="question" />
+                    <label for="external-m">external motivators</label>
+                  </div>
+
+
+                </form>
+              </div>
+              </div>
+        </div>
+
+        <!-- Facts -->
+        <div id="facts">
+
+            <!-- FACTS SET 1 -->
+          <div id="facts1">
+          <!-- Question 1 -->
+          <div class="question">
+            <h2>Which of the following is not one of the 3 Key Drivers of Employee Engagement?</h2>
+
+            <form class="answers">
+              <div class="answerSet">
+                <input type="radio" id="semmel" name="question" />
+                <label for="semmel">Relationship with direct manager</label>
+              </div>
+
+              <div class="answerSet correct">
+                <input type="radio" id="wecken" name="question" />
+                <label for="wecken">Compensation</label>
+              </div>
+
+              <div class="answerSet">
+                <input type="radio" id="schrippen" name="question" />
+                <label for="schrippen">Belief in senior leader</label>
+              </div>
+
+              <div class="answerSet">
+                <input type="radio" id="prod" name="question" />
+                <label for="prod">Pride in working for a company</label>
+              </div>
+            </form>
+          </div>
+
+          <!--Question 2-->
+          <div class="question">
+            <h2>Companies with engaged employees out-perform those without engaged employees by:</h2>
+
+            <form class="answers">
+              <div class="answerSet">
+                <input type="radio" id="sahara" name="question" />
+                <label for="sahara">50 - 100%</label>
+              </div>
+
+              <div class="answerSet">
+                <input type="radio" id="mustafa" name="question" />
+                <label for="mustafa">100 - 200%</label>
+              </div>
+
+              <div class="answerSet correct">
+                <input type="radio" id="xldoener" name="question" />
+                <label for="xldoener">200 - 250%</label>
+              </div>
+            </form>
+          </div>
+
+          <!--Question 3-->
+          <div class="question">
+            <h2>The personal relationships between a manager and his or her direct reports is one of the least influential factors affecting employee engagement.</h2>
+
+            <form class="answers">
+              <div class="answerSet">
+                <input type="radio" id="grillroyal" name="question" />
+                <label for="grillroyal">true</label>
+              </div>
+
+              <div class="answerSet correct">
+                <input type="radio" id="12apostel" name="question" />
+                <label for="12apostel">false</label>
+              </div>
+
+            </form>
+          </div>
+          </div>
+
+          <!-- FACTS SET 2 -->
+          <div id="facts2">
+
+            <!-- Question 1 -->
+            <div class="question">
+              <h2>Which employee age group is more often less engaged?</h2>
+
+              <form class="answers">
+                <div class="answerSet">
+                  <input type="radio" id="semmjel" name="question" />
+                  <label for="semmjel">30-39</label>
+                </div>
+
+                <div class="answerSet correct">
+                  <input type="radio" id="wecjken" name="question" />
+                  <label for="wecjken">40-49</label>
+                </div>
+
+                <div class="answerSet">
+                  <input type="radio" id="schrijppen" name="question" />
+                  <label for="schrijppen">50-59</label>
+                </div>
+
+              </form>
+            </div>
+
+            <!--Question 2-->
+            <div class="question">
+              <h2>Regarding the emotional drivers of employee engagement, positive emotions are more contagious than negative ones. True or false?</h2>
+
+              <form class="answers">
+                <div class="answerSet">
+                  <input type="radio" id="saahara" name="question" />
+                  <label for="saahara">true</label>
+                </div>
+
+                <div class="answerSet correct">
+                  <input type="radio" id="musstafa" name="question" />
+                  <label for="musstafa">false</label>
+                </div>
+
+              </form>
+            </div>
+
+            <!--Question 3-->
+            <div class="question">
+              <h2>69% of disengaged employees would move to a new employer for as little as a 5% pay increase, whereas it would take a ___% increase in salary for an engaged employee to move to a new employer.</h2>
+
+              <form class="answers">
+                <div class="answerSet">
+                  <input type="radio" id="grillroyyal" name="question" />
+                  <label for="grillroyyal">10%</label>
+                </div>
+
+                <div class="answerSet correct">
+                  <input type="radio" id="12aapostel" name="question" />
+                  <label for="12aapostel">20%</label>
+                </div>
+
+                <div class="answerSet">
+                    <input type="radio" id="25" name="question" />
+                    <label for="25">25%</label>
+                  </div>
+
+              </form>
+            </div>
+            </div>
+        </div>
+
+        <!-- More Facts-->
+        <div id="morefacts">
+
+        <!-- More Facts SET 1-->
+          <div id="morefacts1">
+
+          <!-- Question 1 -->
+          <div class="question">
+            <h2>Disengagement is higher among post graduates than college graduates or those with a high school diploma.  True or false?</h2>
+
+            <form class="answers">
+              <div class="answerSet correct">
+                <input type="radio" id="prenzlauer" name="question" />
+                <label for="prenzlauer">true</label>
+              </div>
+
+              <div class="answerSet">
+                <input type="radio" id="wedding" name="question" />
+                <label for="wedding">false</label>
+              </div>
+            </form>
+          </div>
+
+          <!--Question 2-->
+          <div class="question">
+            <h2>Autonomy, mastery, and purpose are three elements of which type of motivational theory?</h2>
+
+            <form class="answers">
+              <div class="answerSet correct">
+                <input type="radio" id="mitte" name="question" />
+                <label for="mitte">instrinsic motivation</label>
+              </div>
+
+              <div class="answerSet">
+                <input type="radio" id="treptow" name="question" />
+                <label for="treptow">extrinsic motivation</label>
+              </div>
+            </form>
+          </div>
+
+          <!--Question 3-->
+          <div class="question">
+              <h2>being stimulated to accomplish certain goals in order to reach desired outcome, is …</h2>
+  
+              <form class="answers">
+                <div class="answerSet">
+                  <input type="radio" id="hapspiness" name="question" />
+                  <label for="hapspiness">Happiness</label>
+                </div>
+  
+                <div class="answerSet correct">
+                  <input type="radio" id="msotivation" name="question" />
+                  <label for="msotivation">Motivation</label>
+                </div>
+  
+                <div class="answerSet">
+                  <input type="radio" id="esngagement" name="question" />
+                  <label for="esngagement">Engagement</label>
+                </div>
+              </form>
+            </div>
+
+          </div>
+
+        <!-- More Facts SET 2-->
+        <div id="morefacts2">
+            <!-- Question 1 -->
+            <div class="question">
+              <h2>___% of all employees don't know what's expected of them at work</h2>
+  
+              <form class="answers">
+                <div class="answerSet correct">
+                  <input type="radio" id="fhain3" name="question" />
+                  <label for="fhain3">50%</label>
+                </div>
+  
+                <div class="answerSet">
+                  <input type="radio" id="charlottenburg2" name="question" />
+                  <label for="charlottenburg2">20%</label>
+                </div>
+  
+                <div class="answerSet">
+                  <input type="radio" id="lichtenberg" name="question" />
+                  <label for="lichtenberg">10%</label>
+                </div>
+              </form>
+            </div>
+  
+            <!--Question 2-->
+            <div class="question">
+              <h2>Research suggests that smaller organizations have an employee engagement</h2>
+  
+              <form class="answers">
+                <div class="answerSet">
+                  <input type="radio" id="zehlendorf" name="question" />
+                  <label for="zehlendorf">disadvantage</label>
+                </div>
+  
+                <div class="answerSet correct">
+                  <input type="radio" id="pberg" name="question" />
+                  <label for="pberg">advantage</label>
+                </div>
+  
+              </form>
+            </div>
+  
+            <!--Question 3-->
+            <div class="question">
+              <h2> Engagement has the biggest impact on</h2>
+              <form class="answers">
+                <div class="answerSet">
+                  <input type="radio" id="lichtenberg2" name="question" />
+                  <label for="lichtenberg2">Product Quality and Financial performance</label>
+                </div>
+  
+                <div class="answerSet correct">
+                  <input type="radio" id="schoeneberg2" name="question" />
+                  <label for="schoeneberg2">Customer service and Productivity</label>
+                </div>
+  
+                <div class="answerSet">
+                  <input type="radio" id="hohenschönhausen" name="question" />
+                  <label for="hohenschönhausen">Company brand and Financial performance</label>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          </div>
+
+        <!-- more Theory -->
+        <div id="moretheory">
+
+           <!-- More Theory SET 1 -->
+            <div id="moretheory1">
+
+          <!--Question 1-->
+          <div class="question">
+            <h2> More than anything else, _______ drive employee engagement</h2>
+
+            <form class="answers">
+              <div class="answerSet">
+                <input type="radio" id="2000" name="question" />
+                <label for="2000">business transparency and enjoyment of work</label>
+              </div>
+
+              <div class="answerSet correct">
+                <input type="radio" id="1000" name="question" />
+                <label for="1000">leadership and culture</label>
+              </div>
+
+              <div class="answerSet">
+                <input type="radio" id="4000" name="question" />
+                <label for="4000">relationship with colleagues and belief in the Organization</label>
+              </div>
+            </form>
+          </div>
+
+          <!-- Question 2-->
+          <div class="question">
+            <h2>Employees are most likely to view ___: as being responsible for engagement</h2>
+
+            <form class="answers">
+              <div class="answerSet">
+                <input type="radio" id="47" name="question" />
+                <label for="47">Employees themselves</label>
+              </div>
+
+              <div class="answerSet">
+                <input type="radio" id="8" name="question" />
+                <label for="8">HR managers</label>
+              </div>
+
+              <div class="answerSet correct">
+                <input type="radio" id="18" name="question" />
+                <label for="18">leaders</label>
+              </div>
+            </form>
+          </div>
+
+          <!-- Question 3 -->
+          <div class="question">
+            <h2>Large organizations are far more likely to measure employee engagement</h2>
+
+            <form class="answers">
+              <div class="answerSet correct">
+                <input type="radio" id="70" name="question" />
+                <label for="70">true</label>
+              </div>
+
+              <div class="answerSet">
+                <input type="radio" id="325" name="question" />
+                <label for="325">false</label>
+              </div>
+            </form>
+          </div>
+        </div>
+
+          <!-- More Theory SET 2 -->
+          <div id="moretheory2">
+
+              <!--Question 1-->
+              <div class="question">
+                <h2>Most companies measure engagement ____ or less often</h2>
+    
+                <form class="answers">
+                  <div class="answerSet correct">
+                    <input type="radio" id="8-9" name="question" />
+                    <label for="8-9">once a year</label>
+                  </div>
+    
+                  <div class="answerSet">
+                    <input type="radio" id="10-7" name="question" />
+                    <label for="10-7">every 6 month</label>
+                  </div>
+    
+                  <div class="answerSet">
+                    <input type="radio" id="15-2" name="question" />
+                    <label for="15-2">when they think it's relevant</label>
+                  </div>
+                </form>
+              </div>
+    
+              <!-- Question 2-->
+              <div class="question">
+                <h2>Most companies communicate engagement data to the whole company</h2>
+    
+                <form class="answers">
+                  <div class="answerSet correct">
+                    <input type="radio" id="440" name="question" />
+                    <label for="440">true</label>
+                  </div>
+    
+                  <div class="answerSet">
+                    <input type="radio" id="1040" name="question" />
+                    <label for="1040">false</label>
+                  </div>
+    
+                </form>
+              </div>
+    
+              <!-- Question 3 -->
+              <div class="question">
+                <h2> Organizations with low engagement are less likely to
+                    take specific and forceful actions based on the data</h2>
+    
+                <form class="answers">
+                  <div class="answerSet correct">
+                    <input type="radio" id="64" name="question" />
+                    <label for="64">true</label>
+                  </div>
+    
+                  <div class="answerSet">
+                    <input type="radio" id="64-2" name="question" />
+                    <label for="64-2">false</label>
+                  </div>
+    
+                </form>
+              </div>
+    
+            </div>
+              </div>
+
+
+            </div>
+  
+
+    
+      <!-- POINTS RED / GREEN -->
+      <div id="pointWrap">
+        <div class="points"></div>
+        <div class="points"></div>
+        <div class="points"></div>
+      </div>
+
+
+      <div id="totalScore">
+          <p id="total">Total Score: 0</p>
+        </div>
+        
+
+    </section>
+  </div>
+
+
+
+</body>
+
+</html>
