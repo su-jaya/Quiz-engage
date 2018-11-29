@@ -5,7 +5,11 @@
 
 
 body {
+<<<<<<< HEAD
   background: url("Quiz-engage/16844.jpg");
+=======
+  background: url("https://raw.githubusercontent.com/su-jaya/Quiz-engage/master/16844.jpg");
+>>>>>>> 7e061ea8fa43348d6e81db4b9d6bd7a7f76a1019
   background-size: cover;
   background-repeat:no-repeat;
   height: 800px;
